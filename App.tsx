@@ -7,7 +7,9 @@ import {
 } from "@expo-google-fonts/rajdhani";
 import AppLoading from "expo-app-loading";
 import { SigIn } from "./src/Screens/Sigin";
+import { Home } from "./src/Screens/Home/Home";
 import { StatusBar } from "react-native";
+import { Background } from "./src/components/background/background";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -22,13 +24,13 @@ export default function App() {
   }
 
   return (
-    <>
+    <Background>
       <StatusBar
         barStyle="light-content"
         backgroundColor="transparent"
         translucent
       />
-      <SigIn />
-    </>
+      <Home />
+    </Background>
   );
 }
